@@ -7,12 +7,16 @@ const Form1 = () =>{
     const [companyName, setCompanyName] = useState('');
     const [userName, setUserName] = useState('');
     const [email, setEmail] = useState('');
+    const [phoneNum, setPhoneNum] = useState('');
     const onUserNameChange = (e) => {
         setUserName(e.target.value);};
     const onCompanyNameChange = (e)=>{
         setCompanyName(e.target.value);};
     const onEmailChange = (e)=>{
         setEmail(e.target.value);
+    }
+    const onPhoneNumChange = (e)=>{
+        setPhoneNum(e.target.value);
     }
     return (
         <div className={"form"}>
@@ -31,7 +35,10 @@ const Form1 = () =>{
                        onChange={onEmailChange}
             />
             <small>Этот адрес используется как форма связи между вами и нашими специалистами</small>
-
+            <TextField label={'Телефон'}
+                       value={phoneNum}
+                       onChange={onPhoneNumChange}
+            />
             <button onClick={undefined}>
                 Далее
             </button>
