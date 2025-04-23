@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import './form.css';
+
 import {useNavigate} from 'react-router-dom';
 import { TextField } from '@mui/material';
 
@@ -63,37 +64,38 @@ const Form1 = () =>{
     return (
         <div className={"form"}>
             <center><h1>Заявка в ItBot</h1></center>
-            <TextField label={'Название компании'}
+            <TextField label={'Укажите вашу компанию'}
                        value={companyName}
                        required={true}
                        onChange={onCompanyNameChange}
                        error={companyNameError}
                        helperText={companyNameError ? "Это поле обязательно" : ""}
             />
-            <TextField label={'ФИО'}
+            <TextField label={'Укажите ваше ФИО'}
                        value={clientName}
                        required={true}
                        onChange={onClientNameChange}
                        error={clientNameError}
                        helperText={clientNameError ? "Это поле обязательно" : ""}
             />
-            <TextField label={'Электронная почта'}
+            <TextField label={'Укажите вашу электронную почту'}
                        value={email}
                        required={true}
                        onChange={onEmailChange}
                        error={emailError}
                        helperText={emailEmpty? "Это поле обязательно" : emailError? "Введите корректную электронную почту" : ""}
             />
-            <TextField label={'Телефон'}
+            <small>Этот электронный адрес используется как форма связи между вами и нашими специалистами.</small>
+            <TextField label={'Номер телефона для связи'}
                        value={phoneNum}
                        onChange={onPhoneNumChange}
                        error={phoneNumError}
                        helperText={phoneNumError ? "Введите корректный номер телефона" : ""}
             />
+            <small>Для удобства связи с вами нашего специалиста.</small>
             <button type="button" id="btnForm2" onClick={checkAndNavigate}>
                 Далее
             </button>
-
         </div>
     );
 }

@@ -1,7 +1,7 @@
 import './App.css';
 import{Route,Routes}from 'react-router-dom';
-import Form1 from './components/form/Form1.jsx';
-import Form2 from './components/form/Form2.jsx';
+import Form1 from './components/Form/Form1.jsx';
+import Form2 from './components/Form/Form2.jsx';
 function App() {
   return (
     <div className="App">
