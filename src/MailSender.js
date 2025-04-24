@@ -1,28 +1,29 @@
-const nodemailer = require('nodemailer');
+import nodemailer from 'nodemailer';
 
-async function sendEmail() {
-    let transporter = nodemailer.createTransport({
-        host: undefined,
-        port: 587,
-        secure: false,
-        auth: {
-            user: undefined,
-            pass: undefined
+        const transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+                user: '',
+                pass: ''
+            }
+        });
+
+        let subject = 'Тема'
+
+        let mailOptions = {
+            from: 'WebApp форма',
+            to: 'ivandyseiko@gmail.com',
+            subject: subject,
+            html: <h1>Проверка</h1>
+        };
+        const send = () => {
+            return new Promise((resolve, reject) => {
+                transporter.sendMail(mailOptions, (error, info) => {
+                    if (error) {
+                        reject(error);
+                    }
+                    resolve(info);
+                })
+            })
         }
-    });
-
-    let mailOptions = {
-        from: undefined,
-        to: undefined,
-        subject: undefined,
-        text: undefined,
-        html: undefined
-    };
-
-    try {
-        let info = await transporter.sendMail(mailOptions);
-        console.log('Письмо отправлено: %s', info.messageId);
-    } catch (error) {
-        console.log('Ошибка отправки: ', error);
-    }
-}
+        //send()
