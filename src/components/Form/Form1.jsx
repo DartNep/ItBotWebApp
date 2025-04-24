@@ -93,7 +93,7 @@ const Form1 = () =>{
                        helperText={phoneNumError ? "Введите корректный номер телефона" : ""}
             />
             <small>Для удобства связи с вами нашего специалиста.</small>
-            <button type="button" id="btnForm2" onClick={checkAndNavigate}>
+            <button className={"button"} type="button" id="btnForm2" onClick={checkAndNavigate}>
                 Далее
             </button>
         </div>

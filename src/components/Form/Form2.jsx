@@ -12,7 +12,7 @@ const Form2 = () =>{
                 <option>Разное</option>
                 <option>Оплата и закупка</option>
             </select>
-            <button type='button' id="btnSend">
+            <button className={"button"} type='button' id="btnSend">
                 Отправить
             </button>
         </div>

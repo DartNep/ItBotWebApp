@@ -11,3 +11,6 @@
 .field{
     display: flex;
 }
+.button{
+    cursor: pointer;
+}
