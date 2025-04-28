@@ -62,40 +62,63 @@ const Form1 = () =>{
     };
 
     return (
-        <div className={"form"}>
-            <center><h1>Заявка в ItBot</h1></center>
+        <div className={"page"}>
+            <div className={"header"}>
+                <h1>Заявка в ItBot</h1>
+            </div>
+
+            <div className="container">
+                <div className={'eachForm'}>
             <TextField label={'Укажите вашу компанию'}
+                       id={"textField"}
                        value={companyName}
                        required={true}
                        onChange={onCompanyNameChange}
                        error={companyNameError}
                        helperText={companyNameError ? "Это поле обязательно" : ""}
             />
+                </div>
+                <div className={'eachForm'}>
             <TextField label={'Укажите ваше ФИО'}
+                       id={"textField"}
                        value={clientName}
                        required={true}
                        onChange={onClientNameChange}
                        error={clientNameError}
                        helperText={clientNameError ? "Это поле обязательно" : ""}
             />
+                </div>
+                    <div className={'eachForm'}>
             <TextField label={'Укажите вашу электронную почту'}
+                       id={"textField"}
                        value={email}
                        required={true}
                        onChange={onEmailChange}
                        error={emailError}
                        helperText={emailEmpty? "Это поле обязательно" : emailError? "Введите корректную электронную почту" : ""}
             />
-            <small>Этот электронный адрес используется как форма связи между вами и нашими специалистами.</small>
+                    </div>
+                        <div className={"underText"}>
+            Этот электронный адрес используется как форма связи между вами и нашими специалистами.
+                    </div>
+                    <div className={'eachForm'}>
             <TextField label={'Номер телефона для связи'}
+                       id={"textField"}
                        value={phoneNum}
                        onChange={onPhoneNumChange}
                        error={phoneNumError}
                        helperText={phoneNumError ? "Введите корректный номер телефона" : ""}
             />
-            <small>Для удобства связи с вами нашего специалиста.</small>
-            <button className={"button"} type="button" id="btnForm2" onClick={checkAndNavigate}>
-                Далее
-            </button>
+                    </div>
+                        <div className={"underText"}>
+            Для удобства связи с вами нашего специалиста.
+                        </div>
+                <button className={"button"} type="button" id="btnForm2" onClick={checkAndNavigate}>
+                    Далее
+                </button>
+
+            </div>
+
         </div>
     );
 }

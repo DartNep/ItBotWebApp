@@ -1,9 +1,9 @@
-import nodemailer from 'nodemailer';
+const nodemailer = require('nodemailer');
 
         const transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
-                user: '',
+                user: 'ivandyseiko@gmail.com',
                 pass: ''
             }
         });
@@ -14,9 +14,9 @@ import nodemailer from 'nodemailer';
             from: 'WebApp форма',
             to: 'ivandyseiko@gmail.com',
             subject: subject,
-            html: <h1>Проверка</h1>
+            html: '<h1>Проверка</h1>'
         };
-        const send = () => {
+        export const send = () => {
             return new Promise((resolve, reject) => {
                 transporter.sendMail(mailOptions, (error, info) => {
                     if (error) {
@@ -26,4 +26,3 @@ import nodemailer from 'nodemailer';
                 })
             })
         }
-        //send()
