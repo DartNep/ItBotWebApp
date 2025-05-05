@@ -7,7 +7,6 @@
 .page{
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
     padding:10%;
 }
 .header{
@@ -20,12 +19,36 @@
     display: flex;
     flex:1;
     flex-direction: column;
-    align-items: center;
 }
 .eachForm {
     margin-bottom: 15px;
     display: flex;
+    flex-direction: column;
+    height:10vh;
+}
+.eachFormTextArea{
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    min-height: 10vh;
+}
+.eachFormCheckbox {
+    border: gray solid 1px;
+    margin-bottom: 15px;
+    display: flex;
+    height:4vh;
+}
+.eachFormText{
+    display: flex;
     justify-content: start;
+    align-items: end;
+    margin-bottom:0.5vh;
+    height:3vh;
+}
+.eachFormCheckboxText{
+    display: flex;
+    justify-content: left;
+    align-items: center;
 }
 .underText{
     display: flex;
@@ -40,8 +63,8 @@
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-    height: 35vh;
-    width: 40vh;
+    height: 5vh;
+    width: 10vh;
 }
 .button:hover {
     background-color: royalblue;
@@ -49,4 +72,13 @@
 .subselect{
     display: flex;
     flex-direction: column;
+    min-height:5vh;
+    margin-bottom: 4vh;
+}
+.buttonsArea{
+    display: flex;
+    flex-direction: row;
+    height: 5vh;
+    width: 15%;
+    justify-content: space-between;
 }

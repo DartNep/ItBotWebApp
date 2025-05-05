@@ -113,10 +113,11 @@ const Form1 = () =>{
                         <div className={"underText"}>
             Для удобства связи с вами нашего специалиста.
                         </div>
+                <div className={'buttonsArea'}>
                 <button className={"button"} type="button" id="btnForm2" onClick={checkAndNavigate}>
                     Далее
                 </button>
-
+                </div>
             </div>
 
         </div>
